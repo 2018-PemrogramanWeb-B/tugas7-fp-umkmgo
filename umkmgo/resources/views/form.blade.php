@@ -46,28 +46,32 @@
                 </div>
             @endif
             <br>
-            <h1 class="pbot"> Form Peminjaman Buku RBTC</h1>
+            <h1 class="pbot"> Form Pendaftaran Produk UMKMgo</h1>
         <form action="{{url('/posts')}}" method="POST">
             {{@csrf_field()}}
                 <div class="form-group">
-                    <label for="exampleInputEmail1">Nama</label>
-                    <input type="text" class="form-control" name="nama" aria-describedby="emailHelp" placeholder="Nama">
+                    <label for="exampleInputEmail1">Nama Produk</label>
+                    <input type="text" class="form-control" name="nama" aria-describedby="emailHelp" placeholder="Nama Produk">
                 </div>
                 <div class="form-group">
-                    <label for="exampleInputPassword1">NRP</label>
-                    <input type="text" class="form-control" name="nrp" placeholder="NRP">
+                    <label for="exampleInputPassword1">Owner</label>
+                    <input type="text" class="form-control" name="nrp" placeholder="Owner">
                 </div>
                 <div class="form-group">
-                    <label for="exampleInputPassword1">Buku</label>
-                    <input type="text" class="form-control" name="buku" placeholder="Buku yang dipinjam">
+                    <label for="exampleInputPassword1">Alamat Usaha</label>
+                    <input type="text" class="form-control" name="buku" placeholder="Alamat Usaha">
                 </div>
                 <div class="form-group">
-                    <label for="exampleInputPassword1">Tanggal Peminjaman</label>
-                    <input type="text" class="form-control" name="tgl_pin" placeholder="Tanggal Peminjaman">
-                </div>
-                <div class="form-group">
-                    <label for="exampleInputPassword1">Tanggal Kembali</label>
-                    <input type="text" class="form-control" name="tgl_blk" placeholder="Tanggal Kembali">
+                    <label>Upload Image</label>
+                    <div class="input-group">
+                        <span class="input-group-btn">
+                            <span class="btn btn-default btn-file">
+                                Browse… <input type="file" id="imgInp">
+                            </span>
+                        </span>
+                        <input type="text" class="form-control" readonly>
+                    </div>
+                    <img id='img-upload'/>
                 </div>
                 <button type="submit" class="btn btn-primary" name="post">Submit</button>
         </form>

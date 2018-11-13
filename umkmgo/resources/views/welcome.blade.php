@@ -3,14 +3,35 @@
 @section('title')
     UMKMgo - Beranda
 @endsection
+@section('css')
+    <style>
+        .bg{
+          background: linear-gradient(rgba(0,0,0,.7), rgba(0,0,0,.7)), url('bg2.jpg');
+          background-position: center;
+          background-size: cover;
+        }
+    
+    </style>
+@endsection
+
+@section('body')
+    class="bg bg-overlay"
+@endsection
 
 @section('content')
-  <!-- Header with full-height image -->
-<header class="bgimg-1 w3-display-container w3-grayscale-min" id="home">
-  <div class="w3-display-left w3-text-white" style="padding:48px">
-    <span class="w3-jumbo w3-hide-small" style="color:black">Kenali UMKM, Sejahterakan Bangsa</span><br>
-    <span class="w3-xxlarge w3-hide-large w3-hide-medium" style="color:black">Start something that matters</span><br>
-    <span class="w3-large" style="color:black">Temukan produk - produk UMKM masyarakat Surabaya dan bantu mempromosikan usaha mereka</span>
-  </div> 
-</header>  
+<header class="masthead text-center text-dark d-flex" >
+  <div class="container my-auto">
+    <div class="row">
+      <div class="col-lg-10 mx-auto">
+        <h1 style="color:whitesmoke">
+          <strong>UMKMgo</strong>
+        </h1>
+      </div>
+      <div class="col-lg-8 mx-auto">
+        <p class=" mb-5" style="color:white">Ini Tagline</p>
+        <a target="_blank" class="btn btn-outline-white btn-lg waves-effect waves-light" style="color:black" href="/form">Daftar Sekarang</a>
+      </div>
+    </div>
+  </div>
+</header> 
 @endsection

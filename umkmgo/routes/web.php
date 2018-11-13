@@ -12,11 +12,15 @@
 */
 
 Route::get('/', function () {
-    return view('rpl');
+    return view('welcome');
 });
 
 Route::get('/login', function () {
     return view('login');
+});
+
+Route::get('/cari', function () {
+    return view('cari');
 });
 
 Route::get('/welcome', function () {
@@ -29,6 +33,10 @@ Route::get('/table', function () {
 
 Route::get('/form', function () {
     return view('form');
+});
+
+Route::get('/reg', function () {
+    return view('register');
 });
 
 Route::post('/posts', 'FormController@simpan');
