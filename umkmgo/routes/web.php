@@ -10,7 +10,7 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-
+Auth::routes();
 Route::get('/', function () {
     return view('welcome');
 });
@@ -19,13 +19,26 @@ Route::get('/login', function () {
     return view('login');
 });
 
-Route::get('/cari', function () {
-    return view('cari');
-});
+
+//POSTS ROUTE
+Route::get('/cari', 'FormController@index');
+Route::get('/show/{id}', 'FormController@show');
+Route::get('/edit/{id}', 'FormController@edit');
+Route::get('/delete/{id}', 'FormController@destroy');
+Route::post('/posts', 'FormController@simpan');
+Route::post('/update', 'FormController@update');
+
+
+//Route::get('/table', 'FormController@index');
 
 Route::get('/welcome', function () {
     return view('welcome');
 });
+
+Route::get('/test', function () {
+    return view('test');
+});
+
 
 Route::get('/table', function () {
     return view('table');
@@ -38,9 +51,11 @@ Route::get('/form', function () {
 Route::get('/reg', function () {
     return view('register');
 });
+Route::get('/pop', function () {
+    return view('post');
+});
 
-Route::post('/posts', 'FormController@simpan');
-Route::get('/table', 'FormController@index');
-Route::get('/edit/{id}', 'FormController@edit');
-Route::get('/delete/{id}', 'FormController@destroy');
-Route::post('/update', 'FormController@update');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
