@@ -5,17 +5,21 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Post;
 use App\User;
+use App\comment;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Auth;
 
 class FormController extends Controller
 {
     public function simpan(Request $request){
         // dd($request->input());
+        $yanglogin = Auth::id();
         Post::create([
             'judul' =>$request ->judul,
             'deskrip' =>$request ->deskrip,
             'alamat' =>$request ->alamat,
             'gambar' =>$request ->gambar,
+            'users_id' =>$yanglogin,
         ]);
 
         return redirect ('/home')->with('status', 'Produk sudah Ditambahkan');
@@ -24,7 +28,10 @@ class FormController extends Controller
     public function show($id)
     {
         $posts = Post::find($id);
-        return view('posts.show')->with('posts', $posts);
+        $idnya = User::find($posts->users_id);
+        $comments = $posts->comment;
+        $yanglogin = Auth::id();
+        return view('posts.show', compact(['posts','idnya','comments','yanglogin']));
     }
 
     public function index(){

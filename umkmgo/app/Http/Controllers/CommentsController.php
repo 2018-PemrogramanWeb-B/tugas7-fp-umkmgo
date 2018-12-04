@@ -9,13 +9,19 @@ class CommentsController extends Controller
 {
     public function simpan(Request $request){
         // dd($request->input());
-        Post::create([
-            'judul' =>$request ->judul,
+        comment::create([
+            'users_id' =>$request ->users_id,
+            'posts_id' =>$request->posts_id,
             'deskrip' =>$request ->deskrip,
-            'alamat' =>$request ->alamat,
-            'gambar' =>$request ->gambar,
         ]);
 
-        return redirect ('/form')->with('status', 'Produk sudah Ditambahkan');
+        return redirect()->back();
     }
+
+    public function hapus($id){
+        $comment = comment::find($id);
+        $comment->delete();
+        return redirect()->back();
+    }
+
 }

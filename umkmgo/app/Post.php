@@ -6,10 +6,22 @@ use Illuminate\Database\Eloquent\Model;
 
 class Post extends Model
 {
-    protected $table = 'pinjam'; //model ini merepresentasikan table 'post' di database
+    protected $table = 'posts'; //model ini merepresentasikan table 'post' di database
     //digunakan ketika kolom primarykey!=id 
     //protected $primaryKey = "nama id"
 
     //definisi kolom/ properti di table post
-    protected $fillable = ['nama', 'nrp','buku','tgl_pin', 'tgl_blk'];
+    protected $fillable = ['judul', 'deskrip','alamat','gambar','users_id'];
+
+    public function comment()
+    {
+        return $this->hasMany('App\comment','posts_id','id');
+    }
+
+    public function User()
+    {
+        return $this->belongsTo('App\User');
+    }
+
+
 }
