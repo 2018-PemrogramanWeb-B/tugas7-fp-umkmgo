@@ -33,11 +33,12 @@
 
     <style>
         .color-tos{
-            background-color: #6099A6;
+            background-color: #f28300;
         }
         .ptop{
             padding-top: 5%;
         }
+
     </style>
     @yield('css')
 </head>
@@ -61,17 +62,17 @@
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ml-auto">
                             <li class="nav-item">
-                                    <a class="nav-link text-white" href="/cari">{{ __('Browse') }}</a>
+                                    <a class="nav-link text-white" href="/cari">{{ __('Cari') }}</a>
                                 </li>
                         <!-- Authentication Links -->
                         @guest
                         
                             <li class="nav-item">
-                                <a class="nav-link text-white" href="{{ route('login') }}">{{ __('Login') }}</a>
+                                <a class="nav-link text-white" href="{{ route('login') }}">{{ __('Masuk') }}</a>
                             </li>
                             <li class="nav-item">
                                 @if (Route::has('register'))
-                                    <a class="nav-link text-white" href="{{ route('register') }}">{{ __('Register') }}</a>
+                                    <a class="nav-link text-white" href="{{ route('register') }}">{{ __('Daftar') }}</a>
                                 @endif
                             </li>
                         @else
@@ -96,8 +97,8 @@
                             
                         @endguest
                         <li class="nav-item">
-                                <a class="nav-link text-white" href="{{ route('login') }}">{{ __('About') }}</a>
-                            </li>
+                                <a class="nav-link text-white" href="{{ route('login') }}">{{ __('Tentang') }}</a>
+                            </li>                            
                     </ul>
                 </div>
             </div>
