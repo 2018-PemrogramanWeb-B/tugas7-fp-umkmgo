@@ -6,7 +6,7 @@
 @section('css')
     <style>
         .bg{
-          background: linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.5)), url('bg4.jpg');
+          background: linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.5)), url('bg5.jpg');
           background-position: center;
           background-size: cover;
           background-repeat: no-repeat;
@@ -31,12 +31,15 @@
     <div class="row">
       <div class="col-lg-10 mx-auto font">
         <h1 style="color:whitesmoke; font-size:85px">
+          <link href="https://fonts.googleapis.com/css?family=Mukta" rel="stylesheet"> 
           <strong>UMKMgo</strong>
         </h1>
       </div>
       <div class="col-lg-8 mx-auto">
-        <p class=" mb-3" style="color:white">Ini Tagline</p>
-        <a target="_blank" class="btn btn-md waves-effect waves-light" style="background-color:#024059" href="/form">Daftar Sekarang</a>
+        <p style="font-size: 16px"> </p>
+        <p class=" mb-3" style="color:white; font-size: 20px">Majukan Indonesia dengan UMKM!</p>
+        <p style="font-size: 16px"> </p>
+        <a target="_blank" class="btn btn-md waves-effect waves-light" style="background-color:#f28300" href="/form">Daftar Sekarang</a>
       </div>
     </div>
   </div>
