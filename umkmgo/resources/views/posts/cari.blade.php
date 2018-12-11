@@ -15,7 +15,7 @@ UMKMgo - Eksplorasi
   <div class="album py-5 bg-light container">
     {{-- dropdown section --}}
       <div class="dropdown pb-3">
-          <button class="btn dropdown-toggle" style="background-color:#025E73" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <button class="btn dropdown-toggle" style="background-color:#f28300" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             Kategori
           </button>
           <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
