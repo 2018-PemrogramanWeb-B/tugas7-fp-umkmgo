@@ -1,0 +1,19 @@
+@font-face {
+	font-family: Gibson;
+	src:url('/public/font/gibson-bold.tff');
+}
+
+body {
+  font-family: "Gibson", sans-serif;
+  font-weight: 300; }
+
+
+@font-face {
+	font-family: Adriane;
+	src:url('/public/font/Adriane Text Regular.ttf');
+}
+
+body {
+  font-family: "Adriane", serif;
+ }
+
