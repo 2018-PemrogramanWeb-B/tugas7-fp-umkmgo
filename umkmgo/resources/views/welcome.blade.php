@@ -6,7 +6,7 @@
 @section('css')
     <style>
         .bg{
-          background: linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.5)), url('bg4.jpg');
+          background: linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.5)), url('bg5.jpg');
           background-position: center;
           background-size: cover;
           background-repeat: no-repeat;
@@ -15,9 +15,12 @@
         .ptop{
           padding-top: 15%;
         }
-        .font{
-          font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
-        }
+          .font {
+            font-family: Gibson;
+            src: url('{{ public_path('font/gibson-bold.tff') }}');
+          }
+          .font
+
     </style>
 @endsection
 
@@ -35,8 +38,10 @@
         </h1>
       </div>
       <div class="col-lg-8 mx-auto">
-        <p class=" mb-3" style="color:white">Ini Tagline</p>
-        <a target="_blank" class="btn btn-md waves-effect waves-light" style="background-color:#024059" href="/form">Daftar Sekarang</a>
+        <p style="font-family: Adriane; src: url('{{ public_path('font/Adriane Text Regular.tff') }}'); font-size: 2px"> </p>
+        <p class=" mb-3" style="color:white; font-size: 22px">Majukan Indonesia dengan UMKM!</p>
+        <p style="font-size: 16px"> </p>
+        <a target="_blank" class="btn btn-md waves-effect waves-light" style="background-color:#f28300" href="/form">Daftar Sekarang</a>
       </div>
     </div>
   </div>

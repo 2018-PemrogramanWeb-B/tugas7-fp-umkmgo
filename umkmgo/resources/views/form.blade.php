@@ -23,7 +23,7 @@
     </div>
     <div class="form-group">
         <label for="exampleInputPassword1">Deskripsi</label>
-        <input type="text" class="form-control" name="deskrip" placeholder="Deskripsi">
+        <textarea class="form-control" name="deskrip" placeholder="Deskripsi"></textarea> 
     </div>
     <div class="form-group">
         <label for="exampleInputPassword1">Alamat</label>
