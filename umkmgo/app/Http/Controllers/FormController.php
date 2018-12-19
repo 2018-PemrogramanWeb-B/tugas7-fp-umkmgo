@@ -31,6 +31,7 @@ class FormController extends Controller
         $idnya = User::find($posts->users_id);
         $comments = $posts->comment;
         $yanglogin = Auth::id();
+    
         return view('posts.show', compact(['posts','idnya','comments','yanglogin']));
     }
 
@@ -58,7 +59,7 @@ class FormController extends Controller
             $post->gambar = $request ->gambar;
         
         $post->save();
-            return redirect('/home')->with('status', 'Data Telah Diupdate');
+            return redirect('/show/'.$post->id)->with('status', 'Data Telah Diupdate');
         //return redirect('posts/edit/'.$request->id)->with('status', 'Data Telah Diupdate');
     }
 
@@ -66,6 +67,6 @@ class FormController extends Controller
      $posts = Post::find($id);
      $posts->delete();
 
-     return redirect('/home')->with('status', 'Data Telah Terhapus');
+     return redirect('/welcome')->with('status', 'Data Telah Terhapus');
     }
 }

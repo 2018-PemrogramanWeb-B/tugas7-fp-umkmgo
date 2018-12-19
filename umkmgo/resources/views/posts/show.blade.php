@@ -1,3 +1,5 @@
+
+
 @extends('layouts.app')
 
 @section('title')
@@ -6,6 +8,9 @@
 
 @section('css')
     <style>
+      .ptop{
+        padding-top: 9%;
+      }
       .color-tos{
             background-color: #6099A6;
         }
@@ -49,15 +54,15 @@
          
               
           @if ($posts->users_id == $yanglogin )
-          <a href="{{url('/edit/'.$posts->id)}}"><input type="button" value="Sunting"></a>
-          <a href="{{url('/delete/'.$posts->id)}}"><input type="button" value="Hapus"></a>
+          <a href="{{url('/edit/'.$posts->id)}}"><input type="button" class="btn-primary" value="Sunting"></a>
+          <a href="{{url('/delete/'.$posts->id)}}"><input type="button" class="btn-danger" value="Hapus"></a>
           @else
               
           @endif
   
             <!-- Single Comment -->
            
-                <h3>Komentar</h3>
+                <h4 class="ptop">Komentar</h4>
                 @if (count($comments)>0)
                 @foreach ($comments as $item2)
                 <div class="media mb-4">
@@ -65,6 +70,7 @@
                     
                     
                     <div class="media-body">
+                     
                 {{$item2->deskrip}}
                       @if ($item2->users_id == $yanglogin)
                     <a href="{{url('/show/comment/delcom/'.$item2->id) }}">Hapus</a>
