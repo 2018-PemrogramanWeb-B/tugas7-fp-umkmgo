@@ -15,6 +15,7 @@
                     @endif
 
                     You are logged in!
+                    <a target="_blank" class="btn btn-md waves-effect waves-light" style="background-color:#f28300" href="/form">Post Sekarang!</a>
                 </div>
             </div>
         </div>

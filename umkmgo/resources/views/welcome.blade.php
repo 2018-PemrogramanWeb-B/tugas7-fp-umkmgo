@@ -41,7 +41,7 @@
         <p style="font-family: Adriane; src: url('{{ public_path('font/Adriane Text Regular.tff') }}'); font-size: 2px"> </p>
         <p class=" mb-3" style="color:white; font-size: 22px">Majukan Indonesia dengan UMKM!</p>
         <p style="font-size: 16px"> </p>
-        <a target="_blank" class="btn btn-md waves-effect waves-light" style="background-color:#f28300" href="/form">Daftar Sekarang</a>
+       
       </div>
     </div>
   </div>
