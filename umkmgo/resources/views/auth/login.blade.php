@@ -12,6 +12,9 @@
         .ptop{
             padding-top: 5%;
         }
+        .color-tos{
+            background-color: #6099A6;
+        }
     </style>
 @endsection
 

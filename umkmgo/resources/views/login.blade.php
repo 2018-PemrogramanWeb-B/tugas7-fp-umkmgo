@@ -6,6 +6,12 @@
 
 @section('css')
 <link rel="stylesheet" href="{{ asset('css/login.css') }}">
+
+    <style>
+      .color-tos{
+            background-color: #6099A6;
+        }
+        </style>
 @endsection
 
 @section('content')

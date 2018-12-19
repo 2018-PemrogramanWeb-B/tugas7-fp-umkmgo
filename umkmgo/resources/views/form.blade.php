@@ -5,6 +5,15 @@
     UMKMgo - Post
 @endsection
 
+
+@section('css')
+    <style>
+      .color-tos{
+            background-color: #6099A6;
+        }
+    </style>
+@endsection
+
 @section('content')
 <div class="container " style="width:500px">
     @if (session('status'))

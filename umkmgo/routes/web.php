@@ -27,6 +27,7 @@ Route::get('/edit/{id}', 'FormController@edit');
 Route::get('/delete/{id}', 'FormController@destroy');
 Route::post('/posts', 'FormController@simpan');
 Route::post('/update', 'FormController@update');
+Route::get('/mycari', 'mypostController@index');
 
 //Routing Comment
 Route::get('/show/comment/delcom/{id}', 'CommentsController@hapus');
@@ -58,7 +59,11 @@ Route::get('/pop', function () {
     return view('post');
 });
 
-
+Route::middleware('auth')->group(function () {
+    Route::get('/form', function () {
+        return view('form');
+    });
+});
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');

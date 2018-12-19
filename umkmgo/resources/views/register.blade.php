@@ -4,6 +4,14 @@
     UMKMgo - Register
 @endsection
 
+@section('css')
+    <style>
+      .color-tos{
+            background-color: #6099A6;
+        }
+    </style>
+@endsection
+
 @section('content')
 <div class="card">
     <div class="card-block">

@@ -32,22 +32,23 @@
     <link href="{{ asset('css/mdb.lite.css') }}" rel="stylesheet">
 
     <style>
-        .color-tos{
-            background-color: #6099A6;
-        }
+        
         .ptop{
             padding-top: 5%;
         }
+        .custom_nav .navbar.navbar-fixed-top .navbar-inner{
+    background: rgba(255, 255, 255, 0.3);
+}
     </style>
     @yield('css')
 </head>
 <body @yield('body')>
     <div id="app">
-        <nav class="navbar sticky-top navbar-expand-lg color-tos">
+        <nav class="navbar sticky-top navbar-expand-lg color-tos .navbar-inner .custom_nav">
             <div class="container">
-                <a class="navbar-brand text-white" href="{{ url('/') }}">
+                <strong><a class="navbar-brand text-white" href="{{ url('/') }}"><b>
                     UMKMgo
-                </a>
+                </a></strong></b>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -79,24 +80,29 @@
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle text-white" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                     {{ Auth::user()->name }} <span class="caret"></span>
                                 </a>
-                                
+                                {{-- <li class="nav-item">
+                                    <a class="nav-link text-white" href="#">{{ __('Post Saya') }}</a>
+                                </li> --}}
 
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                    <a class="nav-link " href="{{url('/mycari')}}">{{ __('Post Saya') }}</a>
                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
                                         {{ __('Logout') }}
                                     </a>
-
+                                    
                                     <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                                         @csrf
                                     </form>
                                 </div>
                             </li>
                             
+                            
+                            
                         @endguest
                         <li class="nav-item">
-                                <a class="nav-link text-white" href="{{ route('login') }}">{{ __('About') }}</a>
+                                <a class="nav-link text-white" href="/form">{{ __('Post Produk') }}</a>
                             </li>
                     </ul>
                 </div>

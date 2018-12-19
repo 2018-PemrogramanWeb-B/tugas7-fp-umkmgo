@@ -6,7 +6,7 @@
 @section('css')
     <style>
         .bg{
-          background: linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.5)), url('bg5.jpg');
+          background: linear-gradient(rgba(0,0,0,.7), rgba(0,0,0,.7)), url('bg5.jpg');
           background-position: center;
           background-size: cover;
           background-repeat: no-repeat;
@@ -15,12 +15,11 @@
         .ptop{
           padding-top: 15%;
         }
-          .font {
-            font-family: Gibson;
-            src: url('{{ public_path('font/gibson-bold.tff') }}');
-          }
-          .font
-
+        .font{
+          font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+        }
+      
+        
     </style>
 @endsection
 
@@ -30,17 +29,18 @@
 
 @section('content')
 <header class="ptop text-center text-dark d-flex" >
+   
   <div class="container my-auto">
     <div class="row">
       <div class="col-lg-10 mx-auto font">
         <h1 style="color:whitesmoke; font-size:85px">
-          <strong>UMKMgo</strong>
+          <strong><b>UMKMgo</b></strong>
         </h1>
       </div>
       <div class="col-lg-8 mx-auto">
-        <p style="font-family: Adriane; src: url('{{ public_path('font/Adriane Text Regular.tff') }}'); font-size: 2px"> </p>
-        <p class=" mb-3" style="color:white; font-size: 22px">Majukan Indonesia dengan UMKM!</p>
-        <p style="font-size: 16px"> </p>
+        <p class=" mb-3" style="color:white; font-size: 20px">Majukan Indonesia dengan UMKM!</p>
+        <a target="_blank" class="btn btn-m waves-effect waves-light" style="background-color:#024059" href="/form">Daftarkan Produk Anda Sekarang</a>
+        
        
       </div>
     </div>

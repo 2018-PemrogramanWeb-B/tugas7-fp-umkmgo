@@ -4,16 +4,25 @@
     UMKMgo - Post
 @endsection
 
+
+@section('css')
+    <style>
+      .color-tos{
+            background-color: #6099A6;
+        }
+    </style>
+@endsection
+
 @section('content')
 <div class="container " style="width:500px">
     @if (session('status'))
     <div class="alert alert-success">
         {{ session('status') }}
-        <a href="/table"> Klik disini untuk melihat table</a>
+        <a href="/table"> Klik disini untuk melihat post anda</a>
     </div>
 @endif
 <br>
-<h1 class="pbot">Daftarkan Produk Anda</h1>
+<h1 class="pbot">Edit Post</h1>
 <form action="{{url('/update')}}" method="POST">
 {{@csrf_field()}}
     <div class="form-group">

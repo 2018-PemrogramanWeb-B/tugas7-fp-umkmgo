@@ -22,7 +22,7 @@ class FormController extends Controller
             'users_id' =>$yanglogin,
         ]);
 
-        return redirect ('/home')->with('status', 'Produk sudah Ditambahkan');
+        return redirect ('/form')->with('status', 'Produk sudah Ditambahkan');
     }
 
     public function show($id)

@@ -4,10 +4,14 @@
     UMKMgo - Register
 @endsection
 
+
 @section('css')
     <style>
          body{
             background-color: #EBF2F1;
+        }
+        .color-tos{
+            background-color: #6099A6;
         }
     </style>
 @endsection
