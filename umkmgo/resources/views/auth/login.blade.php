@@ -6,24 +6,29 @@
 
 @section('css')
     <style>
-        body{
-            background-color: #EBF2F1;
-        }
         .ptop{
             padding-top: 5%;
         }
-        .color-tos{
-            background-color: #6099A6;
+    
+        .body{
+          background: linear-gradient(rgba(0,0,0,.7), rgba(0,0,0,.7)), url('bg5.jpg');
+          background-position: center;
+          background-size: cover;
+          background-repeat: no-repeat;
+          background-attachment: fixed;
         }
+    
     </style>
 @endsection
-
+@section('body')
+    class="body"
+@endsection
 @section('content')
 <div class="container ptop">
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header text-white" style="background-color:#6099A6">{{ __('Login') }}</div>
+                <div class="card-header text-white" style="background-color:#261A15">{{ __('Login') }}</div>
 
                 <div class="card-body">
                     <form method="POST" action="{{ route('login') }}">
@@ -71,7 +76,7 @@
 
                         <div class="form-group row mb-0">
                             <div class="col-md-8 offset-md-4">
-                                <button type="submit" class="btn btn-primary">
+                                <button type="submit" class="btn" style="background-color:#594943">
                                     {{ __('Login') }}
                                 </button>
 

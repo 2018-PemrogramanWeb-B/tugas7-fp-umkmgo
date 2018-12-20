@@ -8,7 +8,7 @@
 @section('css')
     <style>
       .color-tos{
-            background-color: #6099A6;
+            background-color: #261A15;
         }
     </style>
 @endsection
@@ -42,7 +42,7 @@
     <input type="text" class="form-control" value="{{$posts->gambar}}" name="gambar" placeholder="Link Gambar">
     </div>
 <input type="hidden" name="id" value="{{$posts->id}}">
-    <button type="submit" class="btn btn-primary" name="post">Submit</button>
+    <button type="submit" class="btn" style="background-color:#594943" name="post">Submit</button>
 </form>
 </div>
 @endsection

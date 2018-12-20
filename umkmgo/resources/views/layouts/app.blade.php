@@ -44,7 +44,7 @@
 </head>
 <body @yield('body')>
     <div id="app">
-        <nav class="navbar sticky-top navbar-expand-lg color-tos .navbar-inner .custom_nav">
+        <nav class="navbar sticky-top navbar-expand-lg color-tos">
             <div class="container">
                 <strong><a class="navbar-brand text-white" href="{{ url('/') }}"><b>
                     UMKMgo

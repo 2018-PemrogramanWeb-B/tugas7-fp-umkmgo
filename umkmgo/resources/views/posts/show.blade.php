@@ -12,7 +12,7 @@
         padding-top: 9%;
       }
       .color-tos{
-            background-color: #6099A6;
+            background-color: #261A15;
         }
     </style>
 @endsection
@@ -28,7 +28,7 @@
           <div class="col-lg-8">
   
             <!-- Title -->
-          <h1 class="mt-4">{{$posts->judul}}</h1>
+          <b><strong><h1 class="mt-4">{{$posts->judul}}</h1></strong></b>
   
             <!-- Author -->
             <p class="lead">
@@ -49,9 +49,9 @@
   
             <hr>
   
-            <!-- Post Content -->
+           <div> <!-- Post Content -->
           <p>{{$posts->deskrip}}</p>
-         
+           </div>
               
           @if ($posts->users_id == $yanglogin )
           <a href="{{url('/edit/'.$posts->id)}}"><input type="button" class="btn-primary" value="Sunting"></a>

@@ -39,7 +39,7 @@
       </div>
       <div class="col-lg-8 mx-auto">
         <p class=" mb-3" style="color:white; font-size: 20px">Majukan Indonesia dengan UMKM!</p>
-        <a target="_blank" class="btn btn-m waves-effect waves-light" style="background-color:#024059" href="/form">Daftarkan Produk Anda Sekarang</a>
+        <a target="_blank" class="btn btn-m waves-effect waves-light" style="background-color:#594943" href="/form">Daftarkan Produk Anda Sekarang</a>
         
        
       </div>

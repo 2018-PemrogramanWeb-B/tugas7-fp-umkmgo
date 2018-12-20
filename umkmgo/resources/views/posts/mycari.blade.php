@@ -8,7 +8,7 @@ UMKMgo - Eksplorasi
 @section('css')
     <style>
       .color-tos{
-            background-color: #6099A6;
+            background-color: #261A15;
         }
     </style>
 @endsection
