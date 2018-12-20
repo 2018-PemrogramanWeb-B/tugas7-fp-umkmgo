@@ -70,7 +70,7 @@
                     
                     
                     <div class="media-body">
-                     
+                     {{$item2->penulis}} berkata :
                 {{$item2->deskrip}}
                       @if ($item2->users_id == $yanglogin->id or $yanglogin->role == 'admin')
                     <a href="{{url('/show/comment/delcom/'.$item2->id) }}">Hapus</a>
@@ -94,7 +94,8 @@
                       <textarea class="form-control" rows="3" name="deskrip"></textarea>
                     </div>
                   <input type="hidden" name="posts_id" value="{{$posts->id}}">
-                  <input type="hidden" name="users_id" value="{{$yanglogin}}">
+                  <input type="hidden" name="users_id" value="{{$yanglogin->id}}">
+                  <input type="hidden" name="penulis" value="{{$yanglogin->name}}">
                     <button type="submit" class="btn btn-primary">Submit</button>
                   </form>
                 </div>

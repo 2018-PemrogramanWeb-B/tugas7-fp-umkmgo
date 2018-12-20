@@ -13,6 +13,7 @@ class CommentsController extends Controller
             'users_id' =>$request ->users_id,
             'posts_id' =>$request->posts_id,
             'deskrip' =>$request ->deskrip,
+            'penulis' =>$request->penulis,
         ]);
 
         return redirect()->back();

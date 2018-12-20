@@ -49,7 +49,7 @@ UMKMgo - Eksplorasi
         @foreach ($posts as $item)
         <div class="col-md-4">
             <div class="card mb-4 shadow-sm">
-                <a href="show/{{$item->id}}"><img class="card-img-top" src="{{$item->gambar}}" alt="Card image cap">
+                <a href="/show/{{$item->id}}"><img class="card-img-top" src="{{$item->gambar}}" alt="Card image cap">
               <div class="card-body">
               <p class="card-text"> <a href="/show/{{$item->id}}">{{$item->judul}}</a></p>
               </div></a>
