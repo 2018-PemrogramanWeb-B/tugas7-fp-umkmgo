@@ -18,7 +18,6 @@
     @if (session('status'))
     <div class="alert alert-success">
         {{ session('status') }}
-        <a href="/table"> Klik disini untuk melihat post anda</a>
     </div>
 @endif
 <br>
