@@ -41,6 +41,10 @@
         <label for="exampleInputPassword1">Link Gambar</label>
         <input type="text" class="form-control" name="gambar" placeholder="Link Gambar">
     </div>
+    <div class="form-group">
+        <label for="exampleInputPassword1">Label</label>
+        <input type="text" class="form-control" name="label" placeholder="makanan/kerajaninan/jasa">
+    </div>
     <button type="submit" class="btn" style="background-color:#594943"name="post">Submit</button>
 </form>
 </div>

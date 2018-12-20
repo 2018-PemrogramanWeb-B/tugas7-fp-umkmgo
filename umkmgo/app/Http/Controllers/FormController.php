@@ -20,6 +20,7 @@ class FormController extends Controller
             'alamat' =>$request ->alamat,
             'gambar' =>$request ->gambar,
             'users_id' =>$yanglogin,
+            'label' =>$request->label,
         ]);
 
         return redirect ('/form')->with('status', 'Produk sudah Ditambahkan');
@@ -30,7 +31,7 @@ class FormController extends Controller
         $posts = Post::find($id);
         $idnya = User::find($posts->users_id);
         $comments = $posts->comment;
-        $yanglogin = Auth::id();
+        $yanglogin = Auth::user();
     
         return view('posts.show', compact(['posts','idnya','comments','yanglogin']));
     }

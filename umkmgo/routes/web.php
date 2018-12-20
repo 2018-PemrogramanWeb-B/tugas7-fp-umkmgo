@@ -28,6 +28,7 @@ Route::get('/delete/{id}', 'FormController@destroy');
 Route::post('/posts', 'FormController@simpan');
 Route::post('/update', 'FormController@update');
 Route::get('/mycari', 'mypostController@index');
+Route::get('/search/{id}', 'searchController@index');
 
 //Routing Comment
 Route::get('/show/comment/delcom/{id}', 'CommentsController@hapus');

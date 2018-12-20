@@ -53,7 +53,7 @@
           <p>{{$posts->deskrip}}</p>
            </div>
               
-          @if ($posts->users_id == $yanglogin )
+          @if ($posts->users_id == $yanglogin->id or $yanglogin->role =='admin')
           <a href="{{url('/edit/'.$posts->id)}}"><input type="button" class="btn-primary" value="Sunting"></a>
           <a href="{{url('/delete/'.$posts->id)}}"><input type="button" class="btn-danger" value="Hapus"></a>
           @else
@@ -72,7 +72,7 @@
                     <div class="media-body">
                      
                 {{$item2->deskrip}}
-                      @if ($item2->users_id == $yanglogin)
+                      @if ($item2->users_id == $yanglogin->id or $yanglogin->role == 'admin')
                     <a href="{{url('/show/comment/delcom/'.$item2->id) }}">Hapus</a>
                       @endif
               </div>

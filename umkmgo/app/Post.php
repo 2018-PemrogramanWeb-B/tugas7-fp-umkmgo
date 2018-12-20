@@ -6,12 +6,12 @@ use Illuminate\Database\Eloquent\Model;
 
 class Post extends Model
 {
-    protected $table = 'posts'; //model ini merepresentasikan table 'post' di database
+    protected $table = 'Posts'; //model ini merepresentasikan table 'post' di database
     //digunakan ketika kolom primarykey!=id 
     //protected $primaryKey = "nama id"
 
     //definisi kolom/ properti di table post
-    protected $fillable = ['judul', 'deskrip','alamat','gambar','users_id'];
+    protected $fillable = ['judul', 'deskrip','alamat','gambar','users_id','label'];
 
     public function comment()
     {
